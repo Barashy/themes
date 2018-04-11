@@ -37,6 +37,7 @@
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 			endif;
+			
 			$sambacemetheme_description = get_bloginfo( 'description', 'display' );
 			if ( $sambacemetheme_description || is_customize_preview() ) :
 				?>
