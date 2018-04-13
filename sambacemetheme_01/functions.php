@@ -155,7 +155,16 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Load Jetpack compatibility file.
  */
+
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/*
+		===================
+		Custom Post types
+		===================
+		tutorial link: https://www.youtube.com/watch?v=vSM7w3zzlSU&list=PLriKzYyLb28nUFbe0Y9d-19uVkOnhYxFE&index=18
+*/
+
+require get_template_directory() . '/inc/custom-post-type.php';
