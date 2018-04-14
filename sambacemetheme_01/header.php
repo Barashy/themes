@@ -22,30 +22,21 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<!-- <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'sambacemetheme' ); ?></a> -->
+<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'sambacemetheme' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="shadow c  bg-purple-darkest">
 		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$sambacemetheme_description = get_bloginfo( 'description', 'display' );
-			if ( $sambacemetheme_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $sambacemetheme_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+
+			<?php $header_image = get_header_image();
+				if ( ! empty( $header_image ) ) { ?>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+						<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
+					</a>
+			<?php } // if ( ! empty( $header_image ) ) ?>
+
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'sambacemetheme' ); ?></button>
+			<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'sambacemetheme' ); ?></button> -->
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',

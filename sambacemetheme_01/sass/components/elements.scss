@@ -1,0 +1,8 @@
+.menu-main-container{
+  ul {
+    @apply .flex .list-reset;
+    li {
+      @apply .p-4 .text-lg .h-16;
+    }
+  }
+}

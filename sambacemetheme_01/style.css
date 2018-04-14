@@ -664,6 +664,17 @@ button,
  * @import "tailwindcss/components";
  */
 
+.menu-main-container ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.menu-main-container ul li {
+  padding-left: 1rem;
+  font-size: 1.125rem;
+}
+
 .container {
   width: 100%;
 }
@@ -4623,6 +4634,16 @@ button,
 
 .z-auto {
   z-index: auto;
+}
+
+.screen-reader-text {
+  display: none;
+}
+
+@media speech {
+  .screen-reader-text {
+    display: block;
+  }
 }
 
 /**

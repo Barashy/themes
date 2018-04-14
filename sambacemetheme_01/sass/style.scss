@@ -25,10 +25,6 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
  * @import "tailwindcss/preflight";
  */
 @tailwind preflight;
-
-
-
-
 /**
  * This injects any component classes registered by plugins.
  *
@@ -36,6 +32,11 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
  *
  * @import "tailwindcss/components";
  */
+
+
+@import "components/elements";
+
+
 @tailwind components;
 
 /**
@@ -54,6 +55,8 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
  * @import "components/forms";
  */
 
+
+
 /**
  * This injects all of Tailwind's utility classes, generated based on your
  * config file.
@@ -63,6 +66,8 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
  * @import "tailwindcss/utilities";
  */
 @tailwind utilities;
+
+@import "utilities/accessibility";
 
 /**
  * Here you would add any custom utilities you need that don't come out of the
