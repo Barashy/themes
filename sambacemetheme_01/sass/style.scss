@@ -11,75 +11,56 @@ Text Domain: sambacemetheme
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 */
 
-/**/
 
-/**
- * This injects Tailwind's base styles, which is a combination of
- * Normalize.css and some additional base styles.
- *
- * You can see the styles here:
- * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
- *
- * If using `postcss-import`, use this import instead:
- *
- * @import "tailwindcss/preflight";
- */
 @tailwind preflight;
-/**
- * This injects any component classes registered by plugins.
- *
- * If using `postcss-import`, use this import instead:
- *
- * @import "tailwindcss/components";
- */
 
 
-@import "components/elements";
 
 
 @tailwind components;
 
-/**
- * Here you would add any of your custom component classes; stuff that you'd
- * want loaded *before* the utilities so that the utilities could still
- * override them.
- *
- * Example:
- *
- * .btn { ... }
- * .form-input { ... }
- *
- * Or if using a preprocessor or `postcss-import`:
- *
- * @import "components/buttons";
- * @import "components/forms";
- */
 
-
-
-/**
- * This injects all of Tailwind's utility classes, generated based on your
- * config file.
- *
- * If using `postcss-import`, use this import instead:
- *
- * @import "tailwindcss/utilities";
- */
 @tailwind utilities;
 
 @import "utilities/accessibility";
 
-/**
- * Here you would add any custom utilities you need that don't come out of the
- * box with Tailwind.
- *
- * Example :
- *
- * .bg-pattern-graph-paper { ... }
- * .skew-45 { ... }
- *
- * Or if using a preprocessor or `postcss-import`:
- *
- * @import "utilities/background-patterns";
- * @import "utilities/skew-transforms";
- */
+
+@import 'components/elements';
+
+
+.current-menu-item{
+  @apply .text-red;
+}
+
+.main-navigation {
+  ul {
+    @apply .flex .list-reset;
+    li {
+      @apply .-ml-6 .mr-6;
+      @apply .p-4 .px-6 .text-lg;
+      @apply .h-14 .flex;
+      @apply .text-2xl;
+      a {
+        @apply .text-orange-lightest;
+        text-decoration: none;
+      }
+    }
+    .current-menu-item{
+      @apply .bg-red-dark;
+    }
+  }
+}
+
+
+
+.bg-image-dark-leather {
+  background-image: url('./images/bg-dark-leather.png');
+}
+
+.bg-image-dark-industrial {
+  background-image: url('./images/bg-dark-industrial.png');
+}
+
+.bg-image-light-industrial {
+  background-image: url('./images/bg-light-industrial.png');
+}

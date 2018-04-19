@@ -24,8 +24,8 @@
 <div id="page" class="site">
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'sambacemetheme' ); ?></a>
 
-	<header id="masthead" class="shadow c  bg-purple-darkest">
-		<div class="site-branding">
+	<header id="masthead" class="shadow bg-indigo-darkest bg-image-dark-leather">
+		<div class="site-branding container mx-auto w-4/5">
 
 			<?php $header_image = get_header_image();
 				if ( ! empty( $header_image ) ) { ?>
@@ -34,8 +34,8 @@
 					</a>
 			<?php } // if ( ! empty( $header_image ) ) ?>
 
-
-		<nav id="site-navigation" class="main-navigation">
+		</div>
+		<nav id="site-navigation" class="main-navigation container mx-auto w-4/5 shadow flex items-center">
 			<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'sambacemetheme' ); ?></button> -->
 			<?php
 			wp_nav_menu( array(

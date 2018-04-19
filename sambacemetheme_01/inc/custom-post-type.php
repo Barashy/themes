@@ -112,12 +112,13 @@ function sambacemetheme_custom_post_type () {
         'title',
   			'excerpt',
   			'revisions',
+        'thumbnail',
   		),
   		'taxonomies' => array('category', 'post_tag'),
   		'menu_position' => 7,
   		'exclude_from_search' => false // Cant be found by search
     );
-  register_post_type('Gigs',$args_1);
+  register_post_type('gigs',$args_1);
 
   // Shop Items
     $label_2 = array(

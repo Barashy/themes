@@ -35,3 +35,12 @@ function sambacemetheme_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'sambacemetheme_pingback_header' );
+
+// remove width & height attributes from images
+//
+function remove_img_attr ($html)
+{
+    return preg_replace('/(width|height)="\d+"\s/', "", $html);
+}
+
+add_filter( 'post_thumbnail_html', 'remove_img_attr' );
